@@ -1,4 +1,4 @@
-# encoding: utf-8
+# encoding: ascii
 import sys, hashlib
 from time import sleep
 
@@ -30,7 +30,7 @@ def bruteForce(hash, dic):
 
         for word in pass_file:
 
-            cipher_word = word
+            cipher_word = word.encode("ascii")
 
             hash_word = hashtype(cipher_word.strip())
             digest = hash_word.hexdigest()
@@ -50,6 +50,6 @@ def bruteForce(hash, dic):
 
 if __name__=="__main__":
     if len(sys.argv) != 3:
-        print(f"how to use: python3 hashBruteForce.py <dictionarie_path>\n\nExample python3 hashBruteForce.py sha3_256 'a15f8b81a160b4eebe5c84e9e3b65c87b9b2f18e' C://Users/User/Desktop/dix.txt/")
+        print(f"how to use: python3 hashBruteForce.py <dictionarie_path>\n\nExample python3 hashBruteForce.py 'a15f8b81a160b4eebe5c84e9e3b65c87b9b2f18e' C://Users/User/Desktop/dix.txt/")
     else:
         bruteForce(sys.argv[1], sys.argv[2])
