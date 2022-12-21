@@ -12,14 +12,14 @@ you can find here some tools for cryptography
 or
 
 ```bash
-user@host: ~/$ git clone https://github.com/is-not-avaliable/cryptography-tools
+git clone https://github.com/is-not-avaliable/cryptography-tools
 ```
 
 * Moverse al directorio
 
 
 ```bash
-user@host: ~/ cd cryptography-tools/
+cd cryptography-tools/
 ```
 
 * instalar los requerimientos
@@ -41,7 +41,7 @@ user@host: cryptography-tools/$ pip3 install -r requirements
 
 ### input
 ```bash
-user@host /cryptography-tools/Classic/$ python3 caesar.py [-E, -D] string numeralkey
+python3 caesar.py [-E, -D] string numeralkey
 
 # -E        Encrypt
 # -D        Decrypt
@@ -49,7 +49,7 @@ user@host /cryptography-tools/Classic/$ python3 caesar.py [-E, -D] string numera
 
 ### Example
 ```bash
-user@host /cryptography-tools/Classic/$ python3 caesar.py -E hola 2
+python3 caesar.py -E hola 2
 ```
 
 ### output
@@ -68,7 +68,7 @@ jqnc
 
 ### input
 ```bash
-user@host /cryptography-tools/Classic/$ python3 scytale.py [-E, -D] string rows
+python3 scytale.py [-E, -D] string rows
 
 # -E        Encrypt
 # -D        Decrypt
@@ -76,7 +76,7 @@ user@host /cryptography-tools/Classic/$ python3 scytale.py [-E, -D] string rows
 
 ### Example
 ```bash
-user@host /cryptography-tools/Classic/$ python3 scytale.py -E hola 2
+python3 scytale.py -E hola 2
 ```
 
 ### output
@@ -96,7 +96,7 @@ hloa
 
 ### input
 ```bash
-user@host /cryptography-tools/Classic/$ python3 vigenere.py [-E, -D] mayus(string keyword)
+python3 vigenere.py [-E, -D] mayus(string keyword)
 
 # -E        Encrypt
 # -D        Decrypt
@@ -104,7 +104,7 @@ user@host /cryptography-tools/Classic/$ python3 vigenere.py [-E, -D] mayus(strin
 
 ### Example
 ```bash
-user@host /cryptography-tools/Classic/$ python3 vigenere.py -E HOLA SOL
+python3 vigenere.py -E HOLA SOL
 ```
 
 ### output
@@ -133,12 +133,12 @@ zcws
 
 ### input
 ```bash
-user@host /cryptography-tools/Hash/$ python3 Hash.py <string>
+python3 Hash.py <string>
 ```
 
 ### Example
 ```bash
-user@host /cryptography-tools/Hash/$ python3 Hash.py "hola mundo"
+python3 Hash.py "hola mundo"
 ```
 
 ### output
@@ -177,12 +177,12 @@ bb58a588b29bb90f6e361d87742e67a94a87acc1a1b011971abd5a0aee3eee79fb8515eb77320734
 
 ### input
 ```bash
-user@host /cryptography-tools/Hash/$ python3 HashFiles.py <path>
+python3 HashFiles.py <path>
 ```
 
 ### Example
 ```bash
-user@host /cryptography-tools/Hash/$ python3 HashFiles.py /home/test.txt
+python3 HashFiles.py /home/test.txt
 ```
 
 <hr>
@@ -197,12 +197,12 @@ user@host /cryptography-tools/Hash/$ python3 HashFiles.py /home/test.txt
 
 ### input
 ```bash
-user@host /cryptography-tools/BruteForce/$ python3 CaesarBF.py string
+python3 CaesarBF.py string
 ```
 
 ### Example
 ```bash
-user@host /cryptography-tools/BruteForce/$ python3 CaesarBF.py jqnc
+python3 CaesarBF.py jqnc
 ```
 
 ### output
@@ -243,12 +243,12 @@ trying key #25, KROD
 
 ### input
 ```bash
-user@host: /cryptography-tools/BruteForce/$ python3 HashBF.py <hash> <dictionarie_path>
+python3 HashBF.py <hash> <dictionarie_path>
 ```
 
 ### Example
 ```bash
-user@host: /cryptography-tools/BruteForce/$ python3 HashBF.py 123456 mydictionarie.txt
+python3 HashBF.py 123456 mydictionarie.txt
 ```
 
 ### Output
