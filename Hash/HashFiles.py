@@ -1,3 +1,5 @@
+#!usr/bin/env python3
+# -*- coding: ascii -*-
 import hashlib, sys
 
 
@@ -21,6 +23,6 @@ if __name__=="__main__":
                 for line in opened_file:
                     hash_object.update(line)
                 print('{}: {}'.format(hash_object.name, hash_object.hexdigest()))
-    
+
     else:
         print("How to use: python3 hashfile.py path")
