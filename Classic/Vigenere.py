@@ -1,41 +1,36 @@
+#!usr/bin/env python3
+# -*- coding: ascii -*-
 import sys
 
-def encrypt(plaintext, key):
-    key_length = len(key)
-    key_as_int = [ord(i) for i in key]
-    plaintext_int = [ord(i) for i in plaintext]
-    ciphertext = ''
+def encrypt(rows, plaintext):
+    assert len(plaintext) % rows == 0
 
-    for i in range(len(plaintext_int)):
-        value = (plaintext_int[i] + key_as_int[i % key_length]) % 26
-        ciphertext += chr(value + 97)
+    n = len(plaintext)
+    columns = n // rows
+    ciphertext = ['-'] * n
 
-    return ciphertext
+    for i in range(n):
+        row = i // columns
+        col = i % columns
+        ciphertext[col * rows + row] = plaintext[i]
 
+    return "".join(ciphertext)
 
-def decrypt(ciphertext, key):
-    key_length = len(key)
-    key_as_int = [ord(i) for i in key]
-    ciphertext_int = [ord(i) for i in ciphertext]
-    plaintext = ''
-    
-    for i in range(len(ciphertext_int)):
-        value = (ciphertext_int[i] - key_as_int[i % key_length]) % 26
-        plaintext += chr(value + 97)
+def decrypt(rows, ciphertext):
+    assert len(ciphertext) % rows == 0
 
-    return plaintext
+    return encrypt(len(ciphertext) // rows, ciphertext)
 
-if __name__ == "__main__":
+if __name__=="__main__":
     if len(sys.argv) == 1:
-        print("How to use: python3 vigenere.py [-E, -D] mayus(string keyword)")
+        print("How to use: python3 scytale.py [-E, -D] string rows")
 
     else:
         if sys.argv[1] == "-E":
-            print(encrypt(sys.argv[2], sys.argv[3]))
+            print(encrypt(int(sys.argv[3]), sys.argv[2]))
 
         elif sys.argv[1] == "-D":
-            print(decrypt(sys.argv[2], sys.argv[3]))
+            print(decrypt(int(sys.argv[3]), sys.argv[2]))
 
         else:
-            print("How to use: python3 vigenere.py [-E, -D] mayus(string keyword)")
-    
+            print("How to use: python3 scytale.py [-E, -D] string rows ")
