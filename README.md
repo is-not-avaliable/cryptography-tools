@@ -248,7 +248,7 @@ user@host: /cryptography-tools/BruteForce/$ python3 HashBF.py <hash> <dictionari
 
 ### Example
 ```bash
-user@host: /cryptography-tools/BruteForce/$ python3 HashBF.py 123456
+user@host: /cryptography-tools/BruteForce/$ python3 HashBF.py 123456 mydictionarie.txt
 ```
 
 ### Output
