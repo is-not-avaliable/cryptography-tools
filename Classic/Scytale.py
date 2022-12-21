@@ -1,3 +1,5 @@
+#!usr/bin/env python3
+# -*- coding: ascii -*-
 import sys
 
 def encrypt(rows, plaintext):
@@ -29,6 +31,6 @@ if __name__=="__main__":
 
         elif sys.argv[1] == "-D":
             print(decrypt(int(sys.argv[3]), sys.argv[2]))
-        
-        else: 
+
+        else:
             print("How to use: python3 scytale.py [-E, -D] string rows ")
