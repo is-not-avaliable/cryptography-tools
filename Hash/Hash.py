@@ -1,3 +1,5 @@
+#!usr/bin/env python3
+# -*- coding: ascii -*-
 import hashlib, cryptography, sys
 
 if __name__=="__main__":
@@ -15,6 +17,6 @@ if __name__=="__main__":
 
             except TypeError:
                 print(h.hexdigest(128))
-    
+
     else:
         print("How to use: python3 hash.py string")
